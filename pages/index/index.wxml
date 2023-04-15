@@ -1,0 +1,23 @@
+<!-- banner轮播图 -->
+<swiper indicator-dots="true" indicator-color="rbga(255,255,255,0.5)" indicator-active-color="rbga(194,12,12,1)" autoplay="true" circular="true" interval="3000">
+    <swiper-item wx:for="{{ background }}" wx:key="this">
+        <image src="{{ item }}"/>
+    </swiper-item>
+</swiper>
+<view class="title">热门歌手</view>
+<view class="hotlist">
+    <view class="item" wx:for="{{ artists }}" wx:key="id">
+        <image src="{{item.pic}}"/>
+        <text>{{ item.name }}</text>
+    </view>
+</view>
+<view class="title">最新音乐</view>
+<view class="musicbox">
+    <view class="item" wx:for="{{ newMusic }}" wx:key="id">
+        <view class="txbox">
+            <text class="mname">{{item.name}}</text>
+            <text class="name">{{item.singer}}</text>
+        </view>
+        <image class="playImg" src="/images/play.png" />
+    </view>
+</view>
