@@ -1,7 +1,8 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/find/find"
+        "pages/find/find",
+        "pages/singerDetail/singeDetail"
     ],
     "tabBar": {
         "color": "#777",

@@ -1,0 +1,7 @@
+<view class="imgShow">
+    <image src="{{detail.imgUrl}}" mode="" />
+    <view class="box">
+        <view class="name">{{detail.name}}</view>
+        <view class="txt">{{detail.type}}</view>
+    </view>
+</view>

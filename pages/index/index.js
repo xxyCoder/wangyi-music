@@ -45,6 +45,20 @@ Page({
             }
         })
     },
+    // 点击热门歌手
+    hotLink: function (e) {
+        const index = e.currentTarget.dataset.index; // 获取当前点击的下标
+        const singer = this.data.artists[index];
+        wx.navigateTo({
+            url: '/pages/singerDetail/singeDetail',
+            success: (res) => {
+                // 通过eventChannel向被打开页面传送数据
+                res.eventChannel.emit('acceptDataFromOpenerPage', {
+                    data: singer
+                })
+            }
+        })
+    },
     onLoad: function (options) {
         this.getBanner();
         this.getSinger();
