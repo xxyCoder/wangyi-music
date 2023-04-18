@@ -5,3 +5,26 @@
         <view class="txt">{{detail.type}}</view>
     </view>
 </view>
+<view class="title">歌手简介</view>
+<view class="content {{fold ? 'fold': ''}}">{{detail.intro}}</view>
+<view class="fold">
+    <button bindtap="changeStt">收起 {{ fold ? "⬆" : "⬇" }}</button>
+</view>
+<view class="title">热门单曲</view>
+<view class="musicbox">
+    <block wx:for="{{ hotMusicList }}" wx:key="id" wx:for-index="in">
+        <view class="item">
+            <view class="order"><text class="num">{{in + 1}}</text></view>
+            <view class="txbox">
+                <text class="mname">{{item.name}}</text>
+                <text class="name">{{item.singer}}-{{item.playList}}</text>
+            </view>
+            <image bindtap="playLink" class="playImg" src="/images/play.png" />
+        </view>
+    </block>
+</view>
+<!-- 防止固定定位覆盖 -->
+<view class="blank"></view>
+<view class="bottom">
+    <view class="btn">下载热门歌曲</view>
+</view>

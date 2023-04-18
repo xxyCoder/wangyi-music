@@ -15,13 +15,13 @@
 </view>
 <view class="title">最新音乐</view>
 <view class="musicbox">
-    <block wx:for="{{ newMusic }}" wx:key="id">
+    <block wx:for="{{ newMusic }}" wx:key="id" wx:for-index="in">
         <view class="item">
             <view class="txbox">
                 <text class="mname">{{item.name}}</text>
                 <text class="name">{{item.singer}}</text>
             </view>
-            <image class="playImg" src="/images/play.png" />
+            <image data-index="{{in}}" bindtap="playLink" class="playImg" src="/images/play.png" />
         </view>
     </block>
 </view>

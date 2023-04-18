@@ -24,3 +24,91 @@
     font-size: 30rpx;
     color: #fff;
 }
+
+.title {
+    font-size: 32rpx;
+    font-weight: bold;
+    line-height: 80rpx;
+    color: #333;
+    position: relative;
+    text-indent: 30rpx;
+}
+
+.content {
+    font-size: 26rpx;
+    padding: 0 30rpx;
+    line-height: 40rpx;
+    color: #666;
+}
+
+.fold {
+    height: 200rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.musicbox {
+    font-size: 28rpx;
+    color: #4d4d4d;
+}
+.blank {
+    height: 200rpx;
+}
+.musicbox .item {
+    display: flex;
+    padding: 10rpx 0rpx;
+    margin-left: 32rpx;
+    justify-content: space-between;
+    border-bottom: 1rpx solid rgb(241, 241, 241);
+}
+.item .order {
+    position: relative;
+}
+.order .num {
+    position: relative;
+    right: 50%;
+    top: 10%;
+    transform: translate(-50%,0);
+    color: red;
+}
+.item .txbox {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.item .playImg {
+    width: 80rpx;
+    height: 80rpx;
+    display: block;
+}
+.item .txbox .mname {
+    font-size: 35rpx;
+    /* 避免文字过长影响布局 */
+    width: 600rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;    
+}
+.item .txbox .name {
+    font-size: 28rpx;
+    color: #777;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    border-top: 1rpx solid #ccc;
+    bottom: 0;
+}
+.bottom .btn {
+    background-color: red;
+    text-align: center;
+    line-height: 70rpx;
+    color: #fff;
+    height: 70rpx;
+    width: 70%;
+    border-radius: 15%;
+}

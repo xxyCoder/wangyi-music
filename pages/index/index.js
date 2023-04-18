@@ -59,6 +59,12 @@ Page({
             }
         })
     },
+    // 播放跳转
+    playLink: function(e) {
+        const index = e.currentTarget.dataset.index;
+        const music = this.data.newMusic[index];
+        console.log(music);
+    },
     onLoad: function (options) {
         this.getBanner();
         this.getSinger();
